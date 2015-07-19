@@ -10,11 +10,12 @@ abstract class Axiom[T](val statement : Statement[T]){
 class AxiomForAll[T](val numberOfVariables : Int, statement : Statement[T]) extends Axiom[T](statement) {
 
 
-	def verify(set : Set[T]) : Boolean = {
-		cartesianPower(set, numberOfVariables).forall(
-			statement(_)
-		)
-	}
+	def verify(set : Set[T]) : Boolean = cartesianPower(set, numberOfVariables).forall(statement(_, set))
 
 }
 
+class AxiomExists[T](val numberOfVariables : Int, statement : Statement[T]) extends Axiom[T](statement) {
+
+	def verify(set : Set[T]) : Boolean = cartesianPower(set, numberOfVariables).exists(statement(_, set))
+
+}
