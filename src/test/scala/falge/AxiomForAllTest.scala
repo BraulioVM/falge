@@ -16,7 +16,7 @@ class AxiomForAllTest extends FlatSpec with Matchers {
 
 	it should "allow a variable number of parameters" in {
 
-		val axiom = new AxiomForAll[Int](2, (l, _) => {	// commutativity axiom
+		val axiom = new AxiomForAll[Int](2, (l, _) => {
 			val (a, b) = (l(0), l(1))
 
 			a + b == b + a
