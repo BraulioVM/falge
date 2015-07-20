@@ -16,3 +16,4 @@ assert(potential_semigroup.verify(), true)
 I have already implemented and written tests for the following algebraic structures
 * [Magmas](https://en.wikipedia.org/wiki/Magma_(algebra))
 * [Semigroups](https://en.wikipedia.org/wiki/Semigroup)
+* [Monoids](https://en.wikipedia.org/wiki/Monoid)
