@@ -31,6 +31,12 @@ class SemigroupTest extends FlatSpec with Matchers {
 		realSemigroup.verify() shouldBe true 
 	}
 
+	it should "not need an identity element" in {
+		val numbers = Set(-1, 1)
+		val op = (x : Int, y: Int) => 1
+		val fakeSemigroup = new Semigroup(numbers, op)
 
+		fakeSemigroup.verify() shouldBe true
+	}
 
 }
