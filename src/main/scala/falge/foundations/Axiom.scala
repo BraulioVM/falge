@@ -41,7 +41,7 @@ package object axioms {
 		op(a, op(b, c)) == op(op(a, b), c)
 	})
 
-	def neutralElement[T](op : (T, T) => T) : Axiom[T] = new AxiomExists[T](1, (l, elements) => {
+	def identityElement[T](op : (T, T) => T) : Axiom[T] = new AxiomExists[T](1, (l, elements) => {
 		val e = l(0)
 
 		elements.forall(x => 
