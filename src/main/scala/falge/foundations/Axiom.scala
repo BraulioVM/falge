@@ -7,7 +7,9 @@ abstract class Axiom[T](){
 	def verify(set: Set[T]) : Boolean
 }
 
-class AxiomExplicit[T]()
+class AxiomExplicit[T]( statement: () => Boolean ) extends Axiom[T] {
+	def verify(set : Set[T]) = statement()
+}
 
 class AxiomForAll[T](val numberOfVariables : Int, val statement : Statement[T]) extends Axiom[T]() {
 
