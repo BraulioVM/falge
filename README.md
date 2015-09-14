@@ -17,3 +17,4 @@ I have already implemented and written tests for the following algebraic structu
 * [Magmas](https://en.wikipedia.org/wiki/Magma_(algebra))
 * [Semigroups](https://en.wikipedia.org/wiki/Semigroup)
 * [Monoids](https://en.wikipedia.org/wiki/Monoid)
+* [Group](https://en.wikipedia.org/wiki/Group_(mathematics))
