@@ -8,9 +8,6 @@ class Group[T](elements : Set[T], op : (T, T) => T) extends Monoid[T](elements, 
 
 	val inverseElements = HashMap[T, T]()
 
-
-	private implicit def TypeToOption(a : T) = Some(a)
-
 	private def areInverses(a : T, b : T) = {
 		Some(op(a, b)) == this.identity && Some(op(b, a)) == this.identity
 	}
